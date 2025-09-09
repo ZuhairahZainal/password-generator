@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Password Generator</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="./src/styles.css" />
+        <script src="./src/script.js" defer></script>
+    </head>
+
+    <body>
+        <main class="app">
+            <h1 class="title">Password Generator</h1>
+
+            <!-- Password display -->
+            <section class="display" aria-labelledby="generatedPasswordHeading">
+            <h2 id="generatedPasswordHeading" class="sr-only">Generated password</h2>
+            <output id="passwordOutput" class="password placeholder" aria-live="polite" title="Generated password">
+                P4$5W0rD!
+            </output>
+            <button id="copyBtn" class="icon-btn" type="button" aria-label="Copy password">
+                <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/>
+                </svg>
+                <span id="copiedToast" class="toast" role="status" aria-live="polite" aria-atomic="true">Copied!</span>
+            </button>
+            </section>
+
+            <!-- Options card -->
+            <section class="card" aria-labelledby="optionsHeading">
+            <h2 id="optionsHeading" class="sr-only">Password options</h2>
+
+            <!-- Length -->
+            <div class="row between">
+                <label class="label" for="lengthRange">Character Length</label>
+                <span id="lengthVal" class="length-val">0</span>
+            </div>
+            <input
+                id="lengthRange"
+                class="range range--flat placeholder"
+                type="range"
+                min="0" max="20" step="1" value="0"
+                />
+
+            <!-- Toggles -->
+            <ul class="checks" role="group" aria-label="Character options">
+                <li><label class="check"><input id="uppercase" type="checkbox">Include Uppercase Letters</label></li>
+                <li><label class="check"><input id="lowercase" type="checkbox">Include Lowercase Letters</label></li>
+                <li><label class="check"><input id="numbers"  type="checkbox">Include Numbers</label></li>
+                <li><label class="check"><input id="symbols"  type="checkbox">Include Symbols</label></li>
+            </ul>
+
+            <!-- Strength -->
+            <div class="strength">
+                <span class="label">STRENGTH</span>
+                <div class="strength-right">
+                <span id="strengthLabel" class="strength-label"></span>
+                <div class="meter" aria-hidden="true">
+                    <span class="bar" data-i="1"></span>
+                    <span class="bar" data-i="2"></span>
+                    <span class="bar" data-i="3"></span>
+                    <span class="bar" data-i="4"></span>
+                </div>
+                </div>
+            </div>
+
+            <!-- Generate -->
+            <button id="generateBtn" class="primary-btn" type="button">
+                GENERATE <span aria-hidden="true">→</span>
+            </button>
+            </section>
+        </main>
+    </body>
+</html>
