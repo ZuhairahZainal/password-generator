@@ -1,5 +1,5 @@
 :root {
-    --bg: #100e0e;
+    --bg: #0f0f14;
     --panel: #1b1b22;
     --panel-2: #22232b;
     --text: #e7e9ee;
@@ -45,13 +45,22 @@ body{
 }
 
 .display{
-    background: var(--panel);
+    background: var(--panel--2);
     padding: 18px 18px 18px 22px;
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
     gap: 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+.card {
+  background: var(--panel);     /* main dark card background */
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .password{
@@ -91,7 +100,7 @@ body{
 }
 
 .icon-green {
-    color: var(--accent);   /* green */
+    color: var(--accent);
 }
 
 .toast{
@@ -379,7 +388,7 @@ body{
         width:40px; 
         height:40px; 
     }
-    
+
     .strength{
         flex-direction: column;
         align-items: flex-start;

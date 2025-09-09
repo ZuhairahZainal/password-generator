@@ -121,7 +121,7 @@ function paintRangeFill() {
     const max = Number(lengthRange.max);
     const val = Number(lengthRange.value);
     const pct = ((val - min) / (max - min)) * 100;
-    lengthRange.style.background = `linear-gradient(90deg, var(--accent) ${pct}%, #2e3038 ${pct}%)`;
+    lengthRange.style.background = `linear-gradient(90deg, var(--accent) ${pct}%, #141518ff ${pct}%)`;
 }
 
 // Events - remove white placeholder thumb when user moves slider
@@ -169,7 +169,7 @@ function performGenerate() {
     return;
     }
 
-    if (!upperClicked.checked && !ckLower.checked && !numberClicked.checked && !symbolClicked.checked) {
+    if (!upperClicked.checked && !lowerClicked.checked && !numberClicked.checked && !symbolClicked.checked) {
     alert("Please select at least one option (Uppercase, Lowercase, Numbers, or Symbols).");
     return;
     }
