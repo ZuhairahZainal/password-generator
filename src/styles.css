@@ -45,7 +45,7 @@ body{
 }
 
 .display{
-    background: var(--panel--2);
+    background: var(--panel);
     padding: 18px 18px 18px 22px;
     display: grid;
     grid-template-columns: 1fr auto;
@@ -55,7 +55,7 @@ body{
 }
 
 .card {
-  background: var(--panel);     /* main dark card background */
+  background: var(--panel);
   border-radius: var(--radius);
   padding: 24px;
   display: flex;
